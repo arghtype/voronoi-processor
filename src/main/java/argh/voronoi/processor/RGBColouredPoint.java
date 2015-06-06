@@ -37,7 +37,7 @@ public class RGBColouredPoint {
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return (x * 31 + y * 31) * 31;
     }
 
