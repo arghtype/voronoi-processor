@@ -5,10 +5,8 @@ import argh.voronoi.processor.RGBColouredPoint;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Random;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 /**
  * @author arghtype
@@ -39,20 +37,15 @@ public class EuclideanDistanceAlgorithm implements VoronoiAlgorithm {
 
     private int calculateNewColour(int x, int y) {
         HashMap<Double, Integer> distanceToColor = new HashMap<>();
-        nodes.stream().forEach(point -> {
+        double min = height;
+        for (RGBColouredPoint point : nodes) {
             double distance = getDistance(point.getX(), point.getY(), x, y);
-            distanceToColor.put(distance, point.getRgb());
-        });
-        List<Double> collect = distanceToColor.keySet().stream().collect(Collectors.toList());
-        collect.sort((o1, o2) -> {
-            if (o1 < o2) {
-                return -1;
-            } else if (o1 == o2) {
-                return 0;
+            if(distance < min) {
+                min = distance;
             }
-            return 1;
-        });
-        return distanceToColor.get(collect.get(0));
+            distanceToColor.put(distance, point.getRgb());
+        }
+        return distanceToColor.get(min);
     }
 
     private double getDistance(int x1, int y1, int x2, int y2) {
