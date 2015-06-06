@@ -1,4 +1,4 @@
-package com.argh.processor.algorithm;
+package argh.voronoi.processor.algorithm;
 
 import java.awt.image.BufferedImage;
 

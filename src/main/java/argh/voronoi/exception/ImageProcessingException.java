@@ -1,4 +1,4 @@
-package com.argh.exception;
+package argh.voronoi.exception;
 
 /**
  * @author arghtype

@@ -1,10 +1,13 @@
-package com.argh.processor.algorithm;
+package argh.voronoi.processor.algorithm;
 
-import com.argh.Main;
-import com.argh.processor.RGBColouredPoint;
+import argh.voronoi.processor.RGBColouredPoint;
 
 import java.awt.image.BufferedImage;
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**

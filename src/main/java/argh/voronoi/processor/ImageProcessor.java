@@ -1,9 +1,9 @@
-package com.argh.processor;
+package argh.voronoi.processor;
 
-import com.argh.exception.ImageProcessingException;
-import com.argh.processor.algorithm.Algorithm;
-import com.argh.processor.algorithm.AlgorithmFactory;
-import com.argh.processor.algorithm.VoronoiAlgorithm;
+import argh.voronoi.exception.ImageProcessingException;
+import argh.voronoi.processor.algorithm.AlgorithmFactory;
+import argh.voronoi.processor.algorithm.VoronoiAlgorithm;
+import argh.voronoi.processor.algorithm.Algorithm;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

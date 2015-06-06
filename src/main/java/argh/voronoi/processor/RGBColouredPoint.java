@@ -1,4 +1,4 @@
-package com.argh.processor;
+package argh.voronoi.processor;
 
 /**
  * @author arghtype
