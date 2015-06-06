@@ -55,7 +55,6 @@ public class Main {
         public BufferedImage readImage() throws IOException {
             BufferedImage image;
             File input = new File(path);
-            System.out.println(path + input.getParent());
             image = ImageIO.read(input);
             return image;
         }
