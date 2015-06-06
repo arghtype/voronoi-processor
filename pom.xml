@@ -1,18 +1,16 @@
 <project>
-   <modelVersion>4.0.0</modelVersion>
-   <groupId>argh</groupId>
-   <version>1.0</version>
-   <artifactId>voronoi-processor</artifactId>
-   <packaging>jar</packaging>
-   <name>Voronoi Processor</name>
-   <build>
-      <pluginManagement>
-         <plugins>
-         </plugins>
-      </pluginManagement>
-   </build>
-   <dependencyManagement>
-      <dependencies>
-      </dependencies>
-   </dependencyManagement>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.argh</groupId>
+    <version>1.0</version>
+    <artifactId>voronoi-processor</artifactId>
+    <packaging>jar</packaging>
+    <name>Voronoi Processor</name>
+    <build>
+        <pluginManagement>
+            <plugins>
+            </plugins>
+        </pluginManagement>
+    </build>
+    <dependencyManagement>
+    </dependencyManagement>
 </project>
