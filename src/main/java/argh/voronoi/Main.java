@@ -64,6 +64,8 @@ public class Main {
             File output = new File(prepareOutputFileName());
             if (output.createNewFile()) {
                 ImageIO.write(img, "PNG", output);
+            } else {
+                System.out.println("Output file already exists");
             }
         }
 
