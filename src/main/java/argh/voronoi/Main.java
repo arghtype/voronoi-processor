@@ -77,7 +77,10 @@ public class Main {
             } catch (URISyntaxException e) {
                 e.printStackTrace();
             }
-            String jarDir = jarFile.getParentFile().getPath();
+            String jarDir = "";
+            if (jarFile != null) {
+                jarDir = jarFile.getParentFile().getPath();
+            }
             int i = path.indexOf(".");
             return jarDir + "/processed_" + path.substring(0, i) + ".png";
         }
