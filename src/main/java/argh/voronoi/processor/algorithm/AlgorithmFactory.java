@@ -12,6 +12,9 @@ public class AlgorithmFactory {
             case EUCLIDEAN_DISTANCE:
                 result = new EuclideanDistanceAlgorithm();
                 break;
+            case MANHATTAN_DISTANCE:
+                result = new ManhattanDistanceAlgorithm();
+                break;
         }
         return result;
     }

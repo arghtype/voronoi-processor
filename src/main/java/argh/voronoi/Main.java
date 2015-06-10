@@ -2,6 +2,7 @@ package argh.voronoi;
 
 import argh.voronoi.processor.ImageIOProcessor;
 import argh.voronoi.processor.ImageProcessor;
+import argh.voronoi.processor.algorithm.Algorithm;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -17,16 +18,17 @@ import java.security.CodeSource;
 public class Main {
 
     public static void main(String[] args) {
-        if (args.length < 2) {
-            System.out.println("Too few arguments.");
+        if (args.length != 3) {
+            System.out.println("Incorrect argument number.");
             printHelp();
         } else {
             try {
                 String path = args[0];
-                int n = Integer.valueOf(args[1]);
+                String algPart = args[1];
+                int n = Integer.valueOf(args[2]);
                 MainImageIOProcessor io = new MainImageIOProcessor();
                 io.setInputImagePath(path);
-                new ImageProcessor(n, io).process();
+                new ImageProcessor(Algorithm.getByPartialName(algPart), n, io).process();
             } catch (NumberFormatException e) {
                 e.printStackTrace();
                 System.out.println("Incorrect N parameter");

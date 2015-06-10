@@ -13,7 +13,7 @@ import java.util.Set;
  * @since 06.06.2015
  */
 public class EuclideanDistanceAlgorithm implements VoronoiAlgorithm {
-    private Set<RGBColouredPoint> nodes = new HashSet<>();
+    protected Set<RGBColouredPoint> nodes = new HashSet<>();
     int height;
     int width;
 
@@ -35,7 +35,7 @@ public class EuclideanDistanceAlgorithm implements VoronoiAlgorithm {
         return input;
     }
 
-    private int calculateNewColour(int x, int y) {
+    protected int calculateNewColour(int x, int y) {
         HashMap<Double, Integer> distanceToColor = new HashMap<>();
         double min = height;
         for (RGBColouredPoint point : nodes) {

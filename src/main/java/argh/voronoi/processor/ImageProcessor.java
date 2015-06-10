@@ -11,23 +11,25 @@ import java.awt.image.BufferedImage;
  * @since 05.06.2015
  */
 public class ImageProcessor {
+    private Algorithm algorithm;
     private int controlPointsNumber;
     private ImageIOProcessor io;
 
-    public ImageProcessor(int n, ImageIOProcessor io) {
+    public ImageProcessor(Algorithm algorithm,int n, ImageIOProcessor io) {
+        this.algorithm = algorithm;
         this.controlPointsNumber = n;
         this.io = io;
     }
 
     public void process() throws Exception {
         BufferedImage img = io.readImage();
-        processImage(img, controlPointsNumber);
+        processImage(img);
         io.writeImage(img);
     }
 
-    private void processImage(BufferedImage img, int n) {
-        VoronoiAlgorithm algorithmInstance = AlgorithmFactory.getAlgorithmInstance(Algorithm.EUCLIDEAN_DISTANCE);
-        algorithmInstance.process(img, n);
+    private void processImage(BufferedImage img) {
+        VoronoiAlgorithm algorithmInstance = AlgorithmFactory.getAlgorithmInstance(algorithm);
+        algorithmInstance.process(img, controlPointsNumber);
     }
 
 }
