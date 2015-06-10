@@ -40,8 +40,8 @@ public class Main {
     }
 
     private static void printHelp() {
-        System.out.println("Usage:\n java -jar voronoi-processor.jar image.jpg N\n Where N is number of" +
-                " control points for Voronoi algorithm.");
+        System.out.println("\nUsage:\n java -jar voronoi-processor.jar image.jpg ALG N\nWhere:\n  N is a number of" +
+                " control points for Voronoi algorithm;\n  ALG is an algorithm alias. Allowed values are: EUCLIDEAN, MANHATTAN");
     }
 
     static class MainImageIOProcessor implements ImageIOProcessor {

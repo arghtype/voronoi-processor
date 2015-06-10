@@ -7,5 +7,9 @@ Build:
   mvn clean package
   
 Usage:
-  java -jar voronoi-processor.jar filename number_of_control_points
-  E.g. 'java -jar voronoi-processor.jar cat.jpg 1000'
+  java -jar voronoi-processor.jar filename algorith_name number_of_control_points
+  Supported algorith names are:
+	* EUCLIDEAN - for euclidean distance;
+	* MANHATTAN - for taxicab distance.
+	
+  E.g. 'java -jar voronoi-processor.jar cat.jpg EUCLIDEAN 1000'
